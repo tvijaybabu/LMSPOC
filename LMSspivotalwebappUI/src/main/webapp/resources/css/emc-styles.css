@@ -1,0 +1,59 @@
+input, select, h1, h2, h3, h4, h5, h6, span, div, a ,td{
+	/*margin:0;
+	padding:0 ;*/
+	font-family: 'Helvetica Neue Regular','Helvetica Neue','Arial' !important;
+	font-size: 12px !important;
+}
+body {
+ font-size:12px !important;
+ padding:0 15px;
+}
+table tr {background: #ffffff none repeat scroll 0 0;color:#2f2f2f !important;}
+table tr td font{color:#2f2f2f !important;font-size: 13px;}
+#tablemain > tbody > tr:nth-child(2n+1) > td, #tablemain > tbody > tr:nth-child(2n+1) > td, #tablemain > tbody > tr:nth-child(2n+1) > td {background-color:#c9eeff; }
+#tableLearning > tbody > tr:nth-child(2n+1) > td, #tableLearning > tbody > tr:nth-child(2n+1) > td, #tableLearning > tbody > tr:nth-child(2n+1) > td {background-color:#c9eeff; }
+#tableLearning tr:last-child td{background:none !important;}
+#tableLearning tr:first-child td font,#tablemain tr:first-child td font,#bordertbluserProfile tr:first-child td font{font-weight: bold !important;}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus{ 
+background:linear-gradient(#52bdf4 20%, #0a43a8) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+color:#fff !important;}
+.nav-tabs > li.active > a:hover{background:#0039a6 !important; border-radius: 4px 4px 0 0;color: white;}
+.nav-tabs > li > a { border: 1px soli #dedede !important;}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    background: rgba(0, 0, 0, 0) linear-gradient(#2ca8d6 20%, #0d82d3) repeat scroll 0 0;
+    border-color: #2ca8d6;
+    color: #ffffff;
+	border-radius: 4px;
+	 padding: 4px 20px !important;
+}
+.fontWeightBold{
+	font-weight:bold;
+}
+button:hover, html input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{background:#0d82d3 !important;}
+font{ color:black !important;}
+.h1, h1,h2,h4,h5 {font-size: 22px !important;}
+#headertabl> tbody > tr:nth-child(2n+1) > td, #headertabl > tbody > tr:nth-child(2n+1) > td, #headertabl > tbody > tr:nth-child(2n+1) > td {background-color:#0096db; }
+#headertabl tr td font,#headertabl tr td font a{color:white !important;}
+#bordertblhome tr:first-child td:first-child,#bordertblmngr tr:first-child{ background-color: #c9eeff;}
+h3{font-size: 18px !important;}
+h3.mar00{font-size: 13px !important;}
+td, th {    padding: 4px !important;}
+.bigfont{ font-size: 18px !important;font-weight: normal;}
+input, select, textarea {padding:3px;}
+input[type="text"],input[type="password"],select,textarea{width: 75%;}
+#bordertbl,#bordertblhome{border: 1px solid #ddd !important;}
+.marleft{margin-left: 34px;}
+.martopLeft{ margin-left: 15%; margin-top: 1%;}
+.mar00{margin: 0 !important;}
+.homeresister{margin-left: 9%;}
+.homelogin{margin-left: 3%;}
+.martop{margin-top: 1%;}
+.lerninghomeUpdate{ margin-left: 13.5%;}
+#bordertbluserProfile{
+	border:1px solid #ddd;
+}
+#bordertbluserProfile tr:first-child td{ background-color: #c9eeff;}
+#bordertbluserProfile tr td{
+	width:50%;
+}
