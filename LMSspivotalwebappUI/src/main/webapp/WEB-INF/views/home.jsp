@@ -168,7 +168,7 @@ if(Ml!=null){
 </TR>
 </TABLE>
 </td></tr></TABLE>
-<br><br><br><br><br><TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
+<br><br><br><br><br><TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#c9eeff" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="login">

@@ -451,7 +451,7 @@ function trim(str) {
 </div>
 </div>
 <br><br><br><br><br>
-<TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
+<TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#G7750F" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="login">
