@@ -3,8 +3,10 @@
 <%@page import="java.util.*" %>
 <html>
 <head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/css/emc-styles.css" type="text/css">
 <title>Cloud Foundry sample Application -Login screen</title>
-<link rel='stylesheet' href='css/styles.css'>
+
 <% 
 //session=null;
 String ctxpath	=	request.getContextPath();
@@ -70,11 +72,11 @@ function fnnRegister()
 		document.loginform.NewEmail.focus();
 		return false;
 	}
-	/* if(trim(document.loginform.RMID.value)=="-1"){
+	if(trim(document.loginform.RMID.value)=="-1"){
 		alert("Fields cannot be blank");
-		document.loginform.RMID.focus();
+		document.loginform.ReportingManager.focus();
 		return false;
-	} */
+	}
 /* 	alert(document.loginform.RMID.selectedIndex)
 	alert()
  */	document.loginform.ReportingManager.value=document.loginform.RMID.options[document.loginform.RMID.selectedIndex].text;
@@ -96,22 +98,22 @@ function trim(str) {
 <P>  The time on the server is********* ${serverTime}. </P>
  --%>
 <form method="POST" name="loginform" onload="javascript:fnnload()">
-<TABLE BORDER=1 width="100%">
+<TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#G7750F" height=50 font-color="white"><TD nowrap align=center class=text10 >
-<b><font size="5" color="white">Learning Management System</font></b></TD></TR>
+<b><font size="5" color="white" class="bigfont">Learning Management System</font></b></TD></TR>
 </TABLE>
-<TABLE BORDER=0 align=center width=80% >
-<TR><TD nowrap align=center><font color=red><h3>${MS2}</h3></font></TD></TR>
-<TR><TD nowrap align=center><font color=red><h3>${MS3}</h3></font></TD></TR>
+<TABLE BORDER=0 align=center width=80% id="tablemain" class="table-bordered martop" >
+<TR><TD nowrap align=center><font color=red><h3 class="mar00">${MS2}</h3></font></TD></TR>
+<TR><TD nowrap align=center><font color=red><h3 class="mar00">${MS3}</h3></font></TD></TR>
 </TABLE>
-<TABLE BORDER=0 align=center width=80% >
-<TR><TD nowrap align=center><font color=red><h3>${result}</h3></font></TD></TR>
+<TABLE BORDER=0 align=center width=80% id="tablemain" class="table-bordered">
+<TR><TD nowrap align=center><font color=red><h3 class="mar00">${result}</h3></font></TD></TR>
 </TABLE>
 <BR><BR><BR><BR>
 <font size="3" color="black">
-<TABLE BORDER=1 align=center width=80%>
-<tr><td>
-<TABLE BORDER=1>
+<TABLE BORDER=0 align=center width=80%>
+<tr><td width="50%">
+<TABLE BORDER=0 id="bordertblhome" width="100%">
 <TR><TD colspan=2 bgcolor="#G7750F"><b><font size="3" color="white">New User</font></b></TD></TR>
 <TR><TD>Enter User Name</TD><td>
 <INPUT TYPE=TEXT NAME="NewUserName" maxlength=30/>
@@ -123,7 +125,7 @@ function trim(str) {
 <INPUT TYPE=password NAME="Newrepassword" maxlength=12/>
 </TD></TR>
 <TR><TD>Enter Email-id</TD><TD>
-<INPUT NAME="NewEmail" maxlength=30/>
+<INPUT  type="TEXT" NAME="NewEmail" maxlength=30/>
 </TD></TR>
 <TR><TD>Select Role</TD><TD>
 <select NAME="Role"><option value='User'>User</option>
@@ -150,11 +152,11 @@ if(Ml!=null){
 </select>
 </TD></TR>
 
-<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Register" onclick="javascript:fnnRegister()"></TD>
+<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Register" onclick="javascript:fnnRegister()" class="homeresister"></TD>
 
 </TR>
-</TABLE></td><td valign=top>
-<TABLE BORDER=1>
+</TABLE></td><td valign=top width="50%">
+<TABLE BORDER=0 id="bordertblhome" width="100%">
 <TR><TD colspan=2 bgcolor="#G7750F"><b><font size="3" color="white">Existing User</font></b></TD></TR>
 <TR><TD>Enter User Name</TD><td>
 <INPUT TYPE=TEXT NAME="UserName"/>
@@ -162,7 +164,7 @@ if(Ml!=null){
 <TR><TD>Enter Password</TD><TD>
 <INPUT TYPE=password NAME="password" maxlength=12/>
 </TD></TR>
-<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Login" onclick="javascript:fnnlogin()"></TD>
+<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Login" onclick="javascript:fnnlogin()" class="homelogin"></TD>
 </TR>
 </TABLE>
 </td></tr></TABLE>
