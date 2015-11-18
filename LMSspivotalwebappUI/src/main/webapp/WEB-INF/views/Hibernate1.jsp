@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <link rel="stylesheet" href="/resources/css/emc-styles.css" type="text/css">
 <title>Course1</title>
 <script>
 function fnnfinish()
@@ -17,14 +19,14 @@ function fnnfinish()
 </head>
 <body>
 <form name="page1form">
-<TABLE BORDER=1 width="100%">
+<TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#G7750F" height=50 font-color="white"><TD nowrap align=center class=text10 >
-<b><font size="5" color="white">Learning Management System</font></b></TD></TR>
+<b><font size="5" color="white" class="bigfont">Learning Management System</font></b></TD></TR>
 </TABLE>
 
 
 <BR><BR><BR><BR>
-<TABLE BORDER=1 width=70% align=center>
+<TABLE BORDER=0 width=70% align=center id="tablemain" class="table-bordered">
 <TR><TD colspan=2 bgcolor="#G7750F"><b><font size="3" color="white">HIBERNATE</font></b></TD></TR>
 <TR><TD>
 <font size="3" color="black">
@@ -60,7 +62,7 @@ So there is no need to create tables in the database manually.<br>
 
 </TABLE>
 
-<input type=button onClick="fnnfinish()" value='Finish'>
+<input type=button onClick="fnnfinish()" value='Finish' class="martopLeft">
 <INPUT TYPE=hidden name="Page" value="1">
 </form>
 </body>

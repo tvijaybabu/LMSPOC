@@ -5,6 +5,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/resources/css/emc-styles.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <title>Cloud Foundry sample Application -Admin screen</title>
@@ -146,13 +147,14 @@ System.out.println("downloadurl.."+url);
 }
 
 %>
-<TABLE BORDER=1 width="100%">
-<TR bgcolor="#G7750F" height=50 ><TD nowrap align=center class=text10 >
-<b><font size="5" color="white">Learning & Development</font></b></TD>
-<td align=right><font size="3" color="white">Welcome ${user}.
-<br><a href="javascript:fnnlogout()">Log Out</a>
+<TABLE id="headertabl" BORDER="0" width="100%" class="table-bordered">
+<TR height=50 ><TD nowrap align=center class=text10 >
+<b><font size="5" color="#2f2f2f" class="bigfont">Learning & Development</font></b></TD>
+<td align=center><font size="3" class="bigfont">Welcome ${user}.
+<br><a href="javascript:fnnlogout()" class="bigfont">Log Out</a>
 </font></td>
 </TR>
+</div>
 </TABLE>
 <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#home">UserList</a></li>
@@ -173,7 +175,7 @@ System.out.println("downloadurl.."+url);
 <TR><TD nowrap align=center><font color=red><h3>${status}</h3></font></TD></TR>
 </TABLE> --%>
   <!-- <input type=button value="download User Report" onclick="javascript:fnndownload()"> -->  
-  <TABLE BORDER=1 width="50%">
+  <TABLE id="tablemain" BORDER=0 width="50%" class="table-bordered">
   <TR  bgcolor="#G7750F"><b><TD><font size="3" color="white">User List from MemCache Service</font></TD></b><td>
   <input type=submit value="Generate User Report"></td></TR>
   <TR  bgcolor="#G7750F"><b><TD><font size="2" color="white">UserName</font></TD><TD><font size="2" color="white">Email-ID</TD></font></b></TR>
@@ -203,7 +205,7 @@ System.out.println("downloadurl.."+url);
     if(cl!=null)
     {
     	%><br><br>
-    	<TABLE border=1 width=70% align=center><TR  bgcolor="#G7750F"><TD>&nbsp;</TD><TD><font size="3" color="white">CourseID</font></TD><TD><font size="3" color="white">Course Name</font></TD><TD><font size="3" color="white">Course Status</TD></font></TR>
+    	<TABLE border=0 width=70% align=center id="tablemain" class="table-bordered"><TR  ><TD>&nbsp;</TD><TD><font size="3" color="white">CourseID</font></TD><TD><font size="3" color="white">Course Name</font></TD><TD><font size="3" color="white">Course Status</TD></font></TR>
     	<%
     	if(cl.size()>0){
     	CourseBean cb = null;
@@ -232,18 +234,18 @@ System.out.println("downloadurl.."+url);
     </div>
   <div id="menu2" class="tab-pane fade">
        <BR><BR>
-    <TABLE><TR><TD>Catalog Name</TD><TD><input type=text name="catname" maxlength=10></TD></TR>
-    <TR><TD>Catalog Description</TD><TD><textarea row=5 cols=24 name="CategoryDescp"></textarea></TD></TR>
+    <TABLE id="bordertbl" width="35%"><TR><TD class="pull-right">Catalog Name</TD><TD><input type=text name="catname" maxlength=10></TD></TR>
+    <TR><TD class="pull-right">Catalog Description</TD><TD><textarea row=5 cols=24 name="CategoryDescp"></textarea></TD></TR>
     <!-- <TR><TD>Catalog Status</TD><TD><select name="catstatus"><option value="Active">Active</option><option value="InActive">InActive</option></select></TD></TR> -->
-    <tr><td colspan=2 ALIGN=center><input type=button value="Submit" onclick="javacript:fnnaddcat()"></td></tr>
+    <tr><td colspan=2 ALIGN=center><input type=button value="Submit" onclick="javacript:fnnaddcat()" class="marleft"></td></tr>
     </TABLE>
   </div>
   <div id="menu3" class="tab-pane fade">
   
   </TABLE>
     <BR><BR>
-    <TABLE>
-    <TR><TD>Select Catalog</TD><TD><select name="catalog_id" >
+    <TABLE id="bordertbl" width="35%" >
+    <TR><TD class="pull-right">Select Catalog</TD><TD><select name="catalog_id" >
     <option value=-1>Select Catalog</option>
   <%
   HashMap<Integer, String> catlist	=	null;
@@ -264,15 +266,15 @@ System.out.println("downloadurl.."+url);
   }
    %>
  </select></TD></TR>
-    <TR><TD>Course Name</TD><TD><input type=text name="coursename" maxlength=20></TD></TR>
-    <TR><TD>Course Description</TD><TD><textarea row=5 cols=23 name="courseDescp"></textarea></TD></TR>
-    <TR><TD>Course Status</TD><TD><select name="coursestatus"><option value="ACTIVE">ACTIVE</option><option value="INACTIVE">INACTIVE</option></select></TD></TR>
-     <tr><td colspan=2 ALIGN=center><input type=button value="Submit" onclick="javacript:fnnaddcourse()"></td></tr>
+    <TR><TD class="pull-right">Course Name</TD><TD><input type=text name="coursename" maxlength=20></TD></TR>
+    <TR><TD class="pull-right">Course Description</TD><TD><textarea row=5 cols=23 name="courseDescp"></textarea></TD></TR>
+    <TR><TD class="pull-right">Course Status</TD><TD><select name="coursestatus"><option value="ACTIVE">ACTIVE</option><option value="INACTIVE">INACTIVE</option></select></TD></TR>
+     <tr><td colspan=2 ALIGN=center><input type=button value="Submit" onclick="javacript:fnnaddcourse()" class="marleft"></td></tr>
     </TABLE>
   </div>
 </div>
 
-<br><br><br><br><br><TABLE BORDER=1 width="100%">
+<br><br><br><br><br><TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
 <TR bgcolor="#G7750F" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="admin">

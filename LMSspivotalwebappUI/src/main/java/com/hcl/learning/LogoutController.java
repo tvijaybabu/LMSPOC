@@ -25,7 +25,7 @@ public class LogoutController {
 	@RequestMapping(value = "/logout", method = RequestMethod.POST)
 	public String home(Locale locale, Model model) {
 		logger.info("Entered Logout controller....");
-		model.addAttribute("result", "Log Out successfully." );
+		model.addAttribute("result", "You have successfully logged out." );
 		HashMap Ml = new HashMap();
 		//ManagerDetails 
 		Ml=ManagerDetails.getManagerList();

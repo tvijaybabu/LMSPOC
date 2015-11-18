@@ -5,6 +5,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/resources/css/emc-styles.css" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <title>Cloud Foundry sample Application -Admin screen</title>
@@ -150,11 +151,11 @@ System.out.println("downloadurl.."+url);
 }
 
 %>
-<TABLE BORDER=1 width="100%">
+<TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#G7750F" height=50 ><TD nowrap align=center class=text10 >
-<b><font size="5" color="white">Learning & Development</font></b></TD>
-<td align=right><font size="3" color="white">Welcome ${user}.
-<br><a href="javascript:fnnlogout()">Log Out</a>
+<b><font size="5" color="white" class="bigfont">Learning & Development</font></b></TD>
+<td align=center><font size="3" color="white" class="bigfont">Welcome ${user}.
+<br><a href="javascript:fnnlogout()" class="bigfont">Log Out</a>
 </font></td>
 </TR>
 </TABLE>
@@ -174,7 +175,7 @@ System.out.println("downloadurl.."+url);
     if(cl!=null)
     {
     	%><br><br>
-    	<TABLE border=1 width=70% align=center><TR  bgcolor="#G7750F"><TD>&nbsp;</TD><TD><font size="3" color="white">UserID</font></TD><TD><font size="3" color="white">Catalog Name</font></TD><TD><font size="3" color="white">Course Name</font></TD><TD><font size="3" color="white">Reporting Manager Status</TD></font><TD><font size="3" color="white">Select Status</TD></font><TD><font size="3" color="white">Reason</TD></font></TR>
+    	<TABLE border=0 id="bordertblmngr" width=100% align=center><TR  bgcolor="#G7750F"><TD>&nbsp;</TD><TD><font size="3" color="white" class="fontWeightBold">UserID</font></TD><TD><font size="3" color="white" class="fontWeightBold">Catalog Name</font></TD><TD><font size="3" color="white" class="fontWeightBold">Course Name</font></TD><TD><font size="3" class="fontWeightBold" color="white" class="fontWeightBold">Reporting Manager Status</TD></font><TD><font size="3" color="white" class="fontWeightBold">Select Status</TD></font><TD><font size="3" color="white" class="fontWeightBold">Reason</TD></font></TR>
     	<%
     	if(cl.size()>0){
     		UserCourse cb = null;
@@ -208,7 +209,7 @@ System.out.println("downloadurl.."+url);
     <input type=hidden name="Hidcoursestatus">  
     </div>
   </div>
-<br><br><br><br><br><TABLE BORDER=1 width="100%">
+<br><br><br><br><br><TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
 <TR bgcolor="#G7750F" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="admin">

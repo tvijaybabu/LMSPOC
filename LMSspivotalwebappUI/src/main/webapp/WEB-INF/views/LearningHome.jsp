@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/resources/css/emc-styles.css" type="text/css">
 <title>Cloud Foundry sample Application -User screen</title>
 <%!
 String url="";
@@ -195,10 +196,10 @@ function trim(str) {
 <BODY>
 <form method="GET" name="userform" onload="javacript:fnnload()">
 
-<TABLE BORDER=1 width="100%">
+<TABLE id="headertabl" BORDER=1 width="100%">
 <TR bgcolor="#G7750F" height=50 font-color="white"><TD nowrap align=center class=text10 >
-<b><font size="5" color="white">Learning & Development</font></b></TD>
-<td align=right><font size="3" color="white">Welcome ${user}.<br><a href="javascript:fnnlogout()">Log Out</a></font></td>
+<b><font size="5" color="white" class="bigfont">Learning & Development</font></b></TD>
+<td align=center><font size="3" color="white" class="bigfont">Welcome ${user}.<br><a href="javascript:fnnlogout()" class="bigfont">Log Out</a></font></td>
 </TR>
 </TABLE>
 <div class="container">
@@ -211,7 +212,7 @@ function trim(str) {
 <font color=red><h2>${result}</h2></font>
 	<div id="home" class="tab-pane fade in active">
     <br><br>
-    <TABLE border=1 width=60%><TR bgcolor="#G7750F" ><TD colspan=4><font size="2" color="white">Catalog Search</font></TD></TR>
+    <TABLE border=0 width=60% id="bordertblhome"><TR bgcolor="#G7750F" ><TD colspan=4><font size="2" color="white" class="fontWeightBold">Catalog Search</font></TD></TR>
     <tr><TD colspan=4>&nbsp;</TD></tr>
     <TR ><TD><select name="Cat_id">
     <option value="-1">Select Catalog</option>
@@ -249,8 +250,9 @@ function trim(str) {
     	
     	if(cl.size()>0){
     %>
-    	<TABLE border=1 width=60%>
-    <TR bgcolor="#G7750F" ><TD colspan=3><font size="2" color="white">Search Results</font></TD></TR>
+	<h3>Search Results</h3>
+    	<TABLE border=0 id="tableLearning" width=60% class="table-bordered">
+   
     <TR bgcolor="#G7750F"><td>&nbsp;</td><td><font size="2" color="white">Catalog Name</font></td><td><font size="2" color="white">Course Name</font></td></TR>
     <%-- <%Iterator catit = catmap.entrySet().iterator();
 	  while (catit.hasNext())
@@ -277,7 +279,7 @@ function trim(str) {
     </TABLE>
 	<%}else{
 		%>
-		<TABLE border=1 width=60%>
+		<TABLE border=0 id="bordertblhome" width=60%>
 	    <TR bgcolor="#G7750F" ><TD colspan=3><font size="2" color="white">Search Results</font></TD></TR>
 	    <TR><TD colspan=3><b><font size="2" color="red">No Results found</font></b></TD></TR>
 	    </TABLE>
@@ -305,7 +307,7 @@ function trim(str) {
 		</ul>
 		<div class="tab-content">
 		<div id="activities" class="tab-pane fade in active">
-		<TABLE width=100% border=1>
+		<TABLE width=100% border=0 id="tablemain" class="table-bordered">
 		<TR bgcolor="#G7750F" ><TD><font size="2" color="white">Catalog Name</font></TD><TD><font size="2" color="white">Course Name</font></TD><TD><font size="2" color="white">Completion Date</font></TD><TD><font size="2" color="white">Status</font></TD><TD><font size="2" color="white">Approval Status</font></TD><TD><font size="2" color="white">Reason</font></TD><TD>&nbsp;</TD><TD>&nbsp;</TD></font></TR>
 		<% 
 		String startdisabld="disabled";
@@ -366,7 +368,7 @@ function trim(str) {
   </div>
 	 <div id="menu2" class="tab-pane fade">
 	 <br><br>
-	 <TABLE BORDER=1 width=40%>
+	 <TABLE BORDER=0 id="bordertbluserProfile" width="60%">
 	 <TR bgcolor="#G7750F"><TD colspan=2><font size="2" color="white">User Profile</font></TD></TR>
 	<TR><TD>User Name</TD><td>
 	<INPUT TYPE=TEXT NAME="UserName" value="<%=user%>" maxlength=30 readOnly=true/>
@@ -381,7 +383,7 @@ function trim(str) {
 	<INPUT TYPE=password NAME="RetypeNewpassword" value=""maxlength=12/>
 	</TD></TR>
 	<TR><TD>Email-id</TD><TD>
-	<INPUT NAME="Email" maxlength=30 value="<%=email%>"/>
+	<INPUT NAME="Email" type="text" maxlength=30 value="<%=email%>"/>
 	</TD></TR>
 	<TR><TD>Select Role</TD><TD>
 	<% 
@@ -441,7 +443,7 @@ function trim(str) {
 			
 	</select>
 </TD></TR>
-	<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Update" onclick="javascript:fnnUpdateUser()"></TD>
+	<TR><TD colspan=2 align=center><INPUT TYPE=BUTTON VALUE="Update" onclick="javascript:fnnUpdateUser()" class="lerninghomeUpdate"></TD>
 	</TR>
 	</TABLE>
 	 </div>
@@ -449,7 +451,7 @@ function trim(str) {
 </div>
 </div>
 <br><br><br><br><br>
-<TABLE BORDER=1 width="100%">
+<TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
 <TR bgcolor="#G7750F" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="login">

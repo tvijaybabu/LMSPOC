@@ -168,12 +168,11 @@ if(Ml!=null){
 </TR>
 </TABLE>
 </td></tr></TABLE>
-<br><br><br><br><br><TABLE BORDER=1 width="100%">
-<TR bgcolor="#G7750F" height=50><TD nowrap align=center ></TD></TR>
+<br><br><br><br><br><TABLE BORDER=1 width="100%" id="tablemain" class="table-bordered">
+<TR bgcolor="#c9eeff" height=50><TD nowrap align=center ></TD></TR>
 </TABLE>
 <INPUT TYPE=hidden name="event" value="login">
 <INPUT TYPE=hidden name="ReportingManager" value="">
-
 </font>
 </center>
 </form>
