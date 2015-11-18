@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+     <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+      <property name="url" value="jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_467de3d0d776395"/>
+      <property name="username" value="b73452b3df25cc"/>
+      <property name="password" value="7b2fbfb7"/>
+      <!-- <property name="url" value="jdbc:mysql://us-cdbr-iron-east-03.cleardb.net/ad_4a4eabc72cd2281"/>
+      <property name="username" value="bbefabf8c39545"/>
+      <property name="password" value="25a93914"/> -->
+ </bean>
+ <!-- Definition for studentJDBCTemplate bean -->
+<bean id="userdao" class="com.hcl.dao.UserDAO">
+<constructor-arg ref="dataSource" />
+</bean>
+</beans>
