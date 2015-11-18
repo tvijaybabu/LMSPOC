@@ -114,9 +114,9 @@ public static int insertUser(User user)
 	//dbCon = DriverManager.getConnection(dbURL, dbusername, dbpassword);
 	count=jdbcTemplate.update(query,new Object[]{user.getUsername(),user.getPassword(),user.getEmailid(),user.getRole(),user.getRm_id(),user.getRm_Mgr_email()});
 	System.out.println("count in dao==>"+count);
-	result= "User registered Successfully...";
+	result= "User registered Successfully.....";
 	SimpleMail sm = new SimpleMail();
-	sm.sendMail(user.getEmailid());
+	sm.sendMail(user.getEmailid(),user.getUsername());
 	}
 	catch (SQLException ex)
 	{ 

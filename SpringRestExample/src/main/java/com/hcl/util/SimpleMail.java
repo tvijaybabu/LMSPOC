@@ -24,8 +24,8 @@ import com.sendgrid.*;
            //new SimpleMail().sendMail("vijaya.babu0607@gmail.com");
         }
 
-        public void sendMail(String tomail) throws Exception{
-        	logger.info("Entered simple Mail ");
+        public void sendMail(String tomail,String user) throws Exception{
+        	logger.info("Entered simple Mail ...........********* ");
             /*Properties props = new Properties();
             props.put("mail.transport.protocol", "smtp");
             props.put("mail.smtp.host", SMTP_HOST_NAME);
@@ -48,7 +48,10 @@ import com.sendgrid.*;
             email.addTo(tomail);
             email.setFrom("arrounapivotal@gmail.com");
             email.setSubject("User Registration");
-            email.setText("User Registration Successfully...using SendGrid Java!");
+            email.setText("Dear "+user+"<br> Congratulations! You have successfully registered. Welcome to the LMS app."
+            		+ "<br>Thanks,<br>LMS Admin");
+            
+            
 
             try {
             	

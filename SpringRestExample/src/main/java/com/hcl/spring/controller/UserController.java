@@ -45,19 +45,19 @@ public class UserController {
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 	
 	//Map to store employees, ideally we should use database
-/*	Map<Integer, Employee> empData = new HashMap<Integer, Employee>();
+	Map<Integer, User> empData = new HashMap<Integer, User>();
 	
-	@RequestMapping(value = EmpRestURIConstants.DUMMY_EMP, method = RequestMethod.GET)
-	public @ResponseBody Employee getDummyEmployee() {
+	@RequestMapping(value = UserRestURIConstants.DUMMY_USER, method = RequestMethod.GET)
+	public @ResponseBody User getDummyEmployee() {
 		logger.info("Start getDummyEmployee");
-		Employee emp = new Employee();
+		User emp = new User();
 		emp.setId(9999);
-		emp.setName("Dummy");
+		//emp.setName("Dummy");
 		emp.setCreatedDate(new Date());
 		empData.put(9999, emp);
 		return emp;
 	}
-*/	
+	
 /*	@RequestMapping(value = EmpRestURIConstants.GET_EMP, method = RequestMethod.GET)
 	public @ResponseBody Employee getEmployee(@PathVariable("id") int empId) {
 		logger.info("Start getEmployee. ID="+empId);
